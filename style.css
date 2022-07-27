@@ -25,7 +25,7 @@ img{
     object-fit: cover;
 }
 p{
-    color: white;
+    color: black;
     font-size: 1.4rem;
     margin-top: 5px;
     line-height: 2.5rem;
@@ -43,6 +43,23 @@ p{
 }
 .section-title span{
     color: purple;
+}
+.cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-top: 30px;
+    transition: .5s ease ;
+    transition-property: background-color, color;
+}
+.cta:hover {
+    color: white;
+    background-color: crimson;
 }
 /* Hero Section */
 #hero .hero{
@@ -108,23 +125,6 @@ p{
 #hero h1:nth-child(3) span{
     animation-delay: 2.5s;
 }
-#hero .cta{
-    display: inline-block;
-    padding: 10px 30px;
-    color: white;
-    background-color: transparent;
-    border: 2px solid crimson;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    margin-top: 30px;
-    transition: .5s ease ;
-    transition-property: background-color, color;
-}
-#hero .cta:hover {
-    color: white;
-    background-color: crimson;
-}
 /* Hero Section */
 /* Services Section */
 #services .services{
@@ -133,9 +133,6 @@ p{
     max-width: 1500px;
     margin: 0;
     padding: 100px 0;
-}
-#services .service-top p{
-    color: black;
 }
 #services .service-bottom{
     color: white;
@@ -168,7 +165,7 @@ p{
     top: 0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(60deg, #29323c, #485563 100%);
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
     opacity: 0.8;
     z-index: -1;
 }
@@ -185,9 +182,115 @@ p{
     text-transform: uppercase;
 }
 #services .service-item p{
+    color: white;
     text-align: left;
 }
 /* Services Section */
+/* Projects Section */
+#projects .projects{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#projects .projects-header h1{
+    margin-bottom: 50px;
+}
+#projects .projects-all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#projects .project-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#projects .project-info{
+    padding: 30px;
+    flex-basis: 50%;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, rgb(78, 78, 78) 0%, rgb(24, 24, 24) 100%);
+    color: white;
+}
+#projects .project-info h1{
+    font-size: 4rem;
+    font-weight: 500;
+}
+#projects .project-info h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+#projects .project-info p{
+    color: white;
+}
+#projects .project-img{
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+#projects .project-img::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, rgb(78, 78, 78) 0%, rgb(24, 24, 24) 100%);;
+    opacity: 0.6;
+}
+#projects .project-img img{
+    transition: .3s ease transform;
+}
+#projects .project-item:hover .project-img img{
+    transform: scale(1.1);
+}
+/* Projects Section */
+/* About Section */
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+
+}
+#about .col-left{
+    width: 550px;
+    height: 360px;
+}
+#about .col-right{
+    width: 100%;
+}
+#about .col-right h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .5rem;
+    margin-bottom: 10px;
+}
+#about .col-right p{
+    margin-bottom: 20px;
+}
+#about .col-right .cta{
+    color: black;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+}
+/* About Section */
+
 /* Keyframes */
 @keyframes text_reveal_box{
     50%{
