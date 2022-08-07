@@ -288,6 +288,23 @@ p{
     color: black;
     margin-bottom: 50px;
     padding: 10px 20px;
+    font-size: 2rem;
+}
+#about .col-left .about-img{
+    height: 100%;
+    position: relative;
+    border: 10px solid white;
+    width: 100%;
+}
+#about .col-left .about-img::after{
+    content:'';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid crimson;
+    z-index: -1;
 }
 /* About Section */
 
