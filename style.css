@@ -93,6 +93,13 @@ p{
     max-width: 1300px;
     padding: 0 10px;
 }
+#header .logo{
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 10px;
+}
 #header .nav-list ul{
     list-style: none;
     position: absolute;
