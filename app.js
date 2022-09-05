@@ -11,7 +11,7 @@ hamburger.addEventListener('click',()=>{
 document.addEventListener('scroll',()=>{
     let scroll_position = window.scrollY;
     if(scroll_position > 150){
-        header.style.backgroundColor = '#29323c';
+        header.style.backgroundColor = '#29323ccb';
     }
     else{
         header.style.backgroundColor = 'transparent';
@@ -22,5 +22,5 @@ menu_item.forEach((item => {
     item.addEventListener('click',()=>{
         hamburger.classList.toggle('active');
         mobile_menu.classList.toggle('active');
-    });
-}));
+    })
+}))

@@ -42,9 +42,6 @@ p{
     letter-spacing: .3rem;
     text-align: center;
 }
-.section-title span{
-    color: purple;
-}
 .cta{
     display: inline-block;
     padding: 10px 30px;
@@ -67,9 +64,6 @@ p{
     /* text-transform: uppercase; */
     color: white;
 }
-.brand h1 span{
-    color: purple;
-}
 /* Header */
 #header{
     position: fixed;
@@ -82,7 +76,7 @@ p{
 #header .header{
     min-height: 8vh;
     background-color: rgba(31,30,30,0.24);
-    transition: .3s ease background-color;
+    transition: .5s ease background-color;
 }
 #header .nav-bar{
     display: flex;
@@ -230,16 +224,15 @@ p{
     z-index: -1;
 }
 #hero h1:nth-child(1){
-    animation-delay: 1s;
+    animation-delay: 1.5s;
 }
 #hero h1:nth-child(2){
-    animation-delay: 2s;
+    animation-delay: 2.5s;
 }
 #hero h1:nth-child(3){
-    /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
     font-weight: 500;
-    animation: text_reveal_name .5s ease forwards;
-    animation-delay: 3s;
+    animation: text_reveal_name .7s ease forwards;
+    animation-delay: 3.5s;
 }
 #hero h1{
     display: black;
@@ -247,7 +240,7 @@ p{
     font-size: 4rem;
     position: relative;
     color: transparent;
-    animation: text_reveal .5s ease forwards;;
+    animation: text_reveal .7s ease forwards;
     animation-delay: 1.5s;
 }
 #hero h1 span{
@@ -257,7 +250,7 @@ p{
     height: 100%;
     width: 0;
     background-color: rgb(68, 118, 226);
-    animation: text_reveal_box 1s ease;
+    animation: text_reveal_box 2s ease;
     animation-delay: 1s;
 }
 #hero h1:nth-child(1) span{
@@ -270,19 +263,19 @@ p{
     animation-delay: 2.5s;
 }
 /* Hero Section */
-/* Services Section */
-#services .services{
+/* goals Section */
+#goals .goals{
     flex-direction: column;
     text-align: center;
     max-width: 1500px;
     margin: 0 auto;
     padding: 100px 0;
 }
-#services .service-top{
+#goals .goals-top{
     max-width: 500px;
     margin: 0 auto;
 }
-#services .service-bottom{
+#goals .goals-bottom{
     color: white;
     display: flex;
     align-items: center;
@@ -291,7 +284,7 @@ p{
     margin-top: 50px;
     
 }
-#services .service-item{
+#goals .goals-item{
     flex-basis: 80%;
     display: flex;
     align-items: flex-start;
@@ -306,7 +299,7 @@ p{
     z-index: 1;
     overflow: hidden;
 }
-#services .service-item::after{
+#goals .goals-item::after{
     content: '';
     position: absolute;
     left: 0;
@@ -314,43 +307,44 @@ p{
     height: 100%;
     width: 100%;
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-    opacity: 0.9;
+    opacity: 0.8;
     z-index: -1;
 }
-#services .service-bottom .icon{
+#goals .goals-bottom .icon{
     height: 80px;
     width: 80px;
     margin-bottom: 20px;
 
 }
-#services .service-item h2{
+#goals .goals-item h2{
     font-size: 2rem;
     color: white;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
-#services .service-item p{
+#goals .goals-item p{
     color: white;
     text-align: left;
 }
-/* Services Section */
-/* Projects Section */
-#projects .projects{
+/* goals Section */
+/* news Section */
+#news .news{
     flex-direction: column;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
+    margin-top: 50px;
     padding: 100px 0;
 }
-#projects .projects-header h1{
+#news .news-header h1{
     margin-bottom: 50px;
 }
-#projects .projects-all{
+#news .news-all{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-#projects .project-item{
+#news .new-item{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -360,7 +354,7 @@ p{
     overflow: hidden;
     border-radius: 10px;
 }
-#projects .project-info{
+#news .new-info{
     padding: 30px;
     flex-basis: 50%;
     background-color: white;
@@ -372,25 +366,25 @@ p{
     background-image: linear-gradient(60deg, rgb(78, 78, 78) 0%, rgb(24, 24, 24) 100%);
     color: white;
 }
-#projects .project-info h1{
+#news .new-info h1{
     font-size: 4rem;
     font-weight: 500;
 }
-#projects .project-info h2{
+#news .new-info h2{
     font-size: 1.8rem;
     font-weight: 500;
     margin-top: 10px;
 }
-#projects .project-info p{
+#news .new-info p{
     color: white;
 }
-#projects .project-img{
+#news .new-img{
     flex-basis: 50%;
     height: 400px;
     overflow: hidden;
     position: relative;
 }
-#projects .project-img::after{
+#news .new-img::after{
     content: '';
     position: absolute;
     left: 0;
@@ -400,13 +394,13 @@ p{
     background-image: linear-gradient(60deg, rgb(78, 78, 78) 0%, rgb(24, 24, 24) 100%);;
     opacity: 0.6;
 }
-#projects .project-img img{
+#news .new-img img{
     transition: .3s ease transform;
 }
-#projects .project-item:hover .project-img img{
+#news .new-item:hover .new-img img{
     transform: scale(1.1);
 }
-/* Projects Section */
+/* news Section */
 /* About Section */
 #about .about{
     flex-direction: column-reverse;
@@ -597,32 +591,32 @@ p{
         font-size: 7rem;
     }
     /* Hero */
-    /* Services Section */
-    #services .service-bottom .service-item{
+    /* goals Section */
+    #goals .goals-bottom .goals-item{
         flex-basis: 45%;
         margin: 1.5%;
     }
-    /* Services Section */
-    /* Project */
-    #projects .project-item{
+    /* goals Section */
+    /* new */
+    #news .new-item{
         flex-direction: row;
     }
-    #projects .project-item:nth-child(even){
+    #news .new-item:nth-child(even){
         flex-direction: row-reverse;
     }
-    #projects .project-item{
+    #news .new-item{
         height: 400px;
         margin: 0;
         width: 100%;
         border-radius: 0;
     }
-    #projects .projects-all .project-info{
+    #news .news-all .new-info{
         height: 100%;
     }
-    #projects .projects-all .project-img{
+    #news .news-all .new-img{
         height: 100%;
     }
-    /* Project */
+    /* new */
     /* About */
     #about .about{
         flex-direction: row;
@@ -678,9 +672,13 @@ p{
         display: none;
     }
     /* header */
-    #services .service-bottom .service-item{
+    #goals .goals-bottom .goals-item{
         flex-basis: 22%;
         margin: 1.5%;
+    }
+    #news .new-item{
+        margin: 20px;
+        border-radius: 10px;
     }
 }
 
