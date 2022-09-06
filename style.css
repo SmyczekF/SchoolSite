@@ -201,9 +201,9 @@ p{
 #hero .hero{
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 50px;
-    justify-content: flex-start;
-    transform: translate(0, -15%);
+    padding: 120px 0;
+    /* justify-content: flex-start; */
+    flex-direction: column;   
 }
 #hero{
     background-image: url(./images/planet2.jpg);
@@ -236,6 +236,7 @@ p{
     animation-delay: 3.5s;
 }
 #hero h1{
+    margin: 0 auto;
     display: black;
     width: fit-content;
     font-size: 4rem;
@@ -263,6 +264,27 @@ p{
 #hero h1:nth-child(3) span{
     animation-delay: 2.5s;
 }
+#hero .top{
+    margin-bottom: 15vh;
+    align-items: center;
+    z-index: 100;
+}
+#hero .bottom{
+    position: absolute;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+}
+#hero h2{
+    bottom: 120px;
+    font-size: 2rem;
+}
+#hero h3{
+    bottom: 40px;
+    font-size: 1.5rem;
+}
+
+
 /* Hero Section */
 /* goals Section */
 #goals .goals{
@@ -287,9 +309,10 @@ p{
 }
 #goals .goals-item{
     flex-basis: 80%;
+    height: 320px;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    /* justify-content: center; */
     flex-direction: column;
     padding: 30px;
     border-radius: 10px;
@@ -325,7 +348,8 @@ p{
 }
 #goals .goals-item p{
     color: white;
-    text-align: left;
+    text-align: center;
+    height: 10px;
 }
 /* goals Section */
 /* news Section */
@@ -412,10 +436,11 @@ p{
 
 }
 #about .col-left{
-    width: 20%px;
+    width: 200px;
     height: 360px;
 }
 #about .col-right{
+    color: white;
     width: 100%;
 }
 #about .col-right h2{
@@ -428,7 +453,6 @@ p{
     margin-bottom: 20px;
 }
 #about .col-right .cta{
-    color: black;
     margin-bottom: 50px;
     padding: 10px 20px;
     font-size: 2rem;
