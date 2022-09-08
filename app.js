@@ -18,16 +18,16 @@ document.addEventListener('scroll',()=>{
         header.style.backgroundColor = 'transparent';
     }
     if(scroll_position > 600 && scroll_position < 1200){
-        website.style.backgroundColor = "#1a130b";
+        website.style.backgroundColor = "#e1f4f5";
     }
     else if(scroll_position > 1200 && scroll_position < 1800){
-        website.style.backgroundColor = "#070e22";
+        website.style.backgroundColor = "#b2f7d0";
     }
     else if(scroll_position > 1800 && scroll_position < 2400){
-        website.style.backgroundColor = "#02113a";
+        website.style.backgroundColor = "#c6f7b2";
     }
     else if(scroll_position > 2400 && scroll_position < 3000){
-        website.style.backgroundColor = "#02113a";
+        website.style.backgroundColor = "#b3e4ff";
     }
 });
 
