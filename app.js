@@ -3,7 +3,8 @@ const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
 const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
 const header = document.querySelector('.header.container');
 const website = document.querySelector('html');
-const methods_menu = document.querySelectorAll('.header .teach-meth-menu')
+const methods_menu = document.querySelectorAll('.header .teach-meth-menu');
+const help_menu = document.querySelectorAll('.header .help-menu');
 
 hamburger.addEventListener('click',()=>{
     hamburger.classList.toggle('active');
@@ -13,12 +14,7 @@ hamburger.addEventListener('click',()=>{
 
 document.addEventListener('scroll',()=>{
     let scroll_position = window.scrollY;
-    if(scroll_position > 150){
-        header.style.backgroundColor = '#29323ccb';
-    }
-    else{
-        header.style.backgroundColor = 'transparent';
-    }
+    
     if(scroll_position > 600 && scroll_position < 1600){
         website.style.backgroundColor = "#e1f4f5";
     }
@@ -38,29 +34,47 @@ document.addEventListener('scroll',()=>{
         website.style.backgroundColor = "#fcc0cf";
     }
 });
-var isClicked = false;
+var isClickedTeach = false;
+var isClickedHelp = false;
 
 menu_item.forEach((item => {
     item.addEventListener('click',()=>{
-        if(item.className != 'teach-meth'){
+        
+        if(item.className != 'teach-meth' && item.className != 'help'){
             hamburger.classList.toggle('active');
             mobile_menu.classList.toggle('active');
         }
         
-        console.log(isClicked);
-        if(item.className === 'teach-meth' && isClicked === false){
-            isClicked = !isClicked;
+        if(item.className === 'teach-meth' && isClickedTeach === false){
+            isClickedTeach = !isClickedTeach;
             item.classList.toggle('active');
         }
-        else if (item.className === 'teach-meth' && isClicked === true){
-            isClicked = !isClicked;
+        else if (item.className === 'help' && isClickedHelp === false){
+            isClickedHelp = !isClickedHelp;
+            item.classList.toggle('active');
+        }
+        else if (item.className === 'teach-meth' && isClickedTeach === true){
+            isClickedTeach = !isClickedTeach;
             methods_menu.forEach((el => {
+                el.style.display = 'none';
+            }));
+        }
+        else if (item.className === 'help' && isClickedHelp === true){
+            isClickedHelp = !isClickedHelp;
+            help_menu.forEach((el => {
                 el.style.display = 'none';
             }));
         }
 
         if(item.className ==='teach-meth active'){
             methods_menu.forEach((el => {
+                el.style.display = 'list-item';
+            }));
+
+            item.classList.toggle('active');
+        }
+        else if (item.className ==='help active'){
+            help_menu.forEach((el => {
                 el.style.display = 'list-item';
             }));
 
