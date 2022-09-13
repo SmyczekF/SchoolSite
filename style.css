@@ -95,7 +95,7 @@ p{
     height: 40px;
     width: 40px;
 }
-#header .nav-list ul{
+#header .nav-list .main-menu{
     list-style: none;
     position: absolute;
     background-color: rgb(31,30,30);
@@ -114,10 +114,23 @@ p{
 #header .nav-list ul.active{
     left:0;
 }
+#header .nav-list .help,
+#header .nav-list .teach-meth{
+    cursor: pointer;
+}
 #header .nav-lsit .teach-meth-menu.active{
     display: list-item;
 }
+#header .nav-list .help-men,
+#header .nav-list .teach{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 #header .nav-list ul a{
+    
     font-size: 2.5rem;
     font-weight: 500;
     letter-spacing: .2rem;
@@ -252,6 +265,7 @@ p{
     color: transparent;
     animation: text_reveal .7s ease forwards;
     animation-delay: 1.5s;
+    text-align: center;
 }
 #hero h1 span{
     position: absolute;
@@ -284,7 +298,7 @@ p{
     text-align: center;
 }
 #hero h2{
-    bottom: 120px;
+    bottom: 130px;
     font-size: 2rem;
 }
 #hero h3{
@@ -699,17 +713,14 @@ p{
     #header .hamburger{
         display: none;
     }
-    #header .nav-list ul{
+    #header .nav-list .main-menu{
         position: initial;
         display: inline;
         height: auto;
         width: fit-content;
         background-color: transparent;
     }
-    #header .nav-list ul a{
-        padding-bottom: 0;
-    }
-    #header .nav-list ul .nmli{
+    #header .nav-list .main-menu .nmli{
         display: inline-block;
         list-style: none;
         cursor: pointer;
@@ -717,28 +728,31 @@ p{
     #header .help-menu,
     #header .teach-meth-menu{
         background-color: #29323ccb;
-        width: 240px;
+        width: 236px;
         transition: .5s ease background-color;
         position: absolute;
         text-align: center;
+        transform: translateX(10px);
     }
     #header .help-men li:nth-child(1),
     #header .teach li:nth-child(1){
-        transform: translate(0,9px);
+        transform: translateY(29px);
     }
     #header .help-men li:nth-child(2),
     #header .teach li:nth-child(2){
-        transform: translate(0,47px);
+        transform: translateY(87px);
     }
     #header .help-men li:nth-child(3),
     #header .teach li:nth-child(3){
-        transform: translate(0,85px);
+        transform: translateY(145px);
     }
-    #header .nav-list ul li a{
-        transform: translate(0,-10px);
+    #header .nav-list .main-menu li a{
+        justify-content: center;
+        align-items: center;
+        /* transform: translateY(-10px); */
         font-size: 1.5rem;
     }
-    #header .nav-list ul a::after{
+    #header .nav-list .main-menu a::after{
         display: none;
     }
     
